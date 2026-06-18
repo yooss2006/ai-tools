@@ -1,0 +1,7 @@
+interface:
+  display_name: "Multi Ask"
+  short_description: "세 AI 웹 답변을 비교합니다"
+  default_prompt: "$multi-ask로 ChatGPT 웹, Gemini 웹, Claude 웹의 답변을 비교해줘."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technical Writing"
+  short_description: "기술 문서 작성, 구조화, 문장 개선을 돕습니다"
+  default_prompt: "Use $technical-writing to review this technical document and suggest improvements."

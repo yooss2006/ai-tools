@@ -1,0 +1,7 @@
+interface:
+  display_name: "Web GPT Research"
+  short_description: "Approve prompts before ChatGPT research"
+  default_prompt: "Use $web-gpt-research to draft a Web GPT research prompt for my approval before submitting it."
+
+policy:
+  allow_implicit_invocation: false
