@@ -1,0 +1,7 @@
+interface:
+  display_name: "Job Posting HTML Report"
+  short_description: "채용 공고를 HTML 리포트로 분석합니다"
+  default_prompt: "Use $job-posting-html-report to create a Linear-style HTML report from this job posting URL."
+
+policy:
+  allow_implicit_invocation: true

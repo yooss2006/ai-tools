@@ -8,6 +8,7 @@
 - `multi-ask/`: ChatGPT web, Gemini web, Claude web에 같은 질문을 보내고 답변을 비교하는 스킬입니다. (코덱스 전용)
 - `technical-writing/`: 기술 문서 작성, 리뷰, 구조화, 문장 개선을 돕는 스킬입니다.
 - `web-gpt-research/`: 사용자가 승인한 리서치 프롬프트를 ChatGPT/Web GPT에 보내는 명시적 실행 워크플로입니다. (코덱스 전용)
+- `job-posting-html-report/`: 채용 공고 URL을 기반으로 회사 조사, 역할 적합도, 지원 전략, 출처 자료를 포함한 Linear 스타일 정적 HTML 리포트 패키지를 생성합니다.
 
 ## 목적
 새로운 스킬, 서브에이전트, hook, 프롬프트 패턴을 실험하고 검증한 뒤, 다시 쓸 만한 형태로 정리해 두는 공간입니다.
