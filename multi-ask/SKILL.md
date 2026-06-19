@@ -95,16 +95,29 @@ Strict deep research applies only to selected targets. If the user selects ChatG
 
 ## Dispatch And Wait
 
-After all preflight checks pass, submit the approved prompt to each selected target.
+After all preflight checks pass, fan out the approved prompt to every selected target before waiting on long-running answers.
 
-Wait for every selected target to finish:
+For each selected target:
+
+1. Open or reuse the target's prepared tab.
+2. Enable the selected mode and reasoning settings if applicable.
+3. Submit the approved prompt.
+4. Record the target state: `target`, `tab`, `chatUrl`, `submittedAt`, `timeoutAt`, `status`.
+
+Prefer remembering both the live tab and the chat URL. Use the live tab first when polling. If the tab is closed or unavailable, try to recover from the remembered chat URL.
+
+Do not stay on one site while waiting for a long answer before submitting to the next site. Submit to all selected targets first, then poll pending targets in rounds.
+
+Use these timeouts:
 
 - normal mode timeout: 10 minutes per selected target,
 - deep research timeout: 60 minutes per selected target.
 
-If every selected target completes, collect the final answer from each.
+During polling, move between pending tabs and check whether each answer is complete. When a target completes, save its final answer and mark it complete. Continue polling until every selected target completes, times out, or the user interrupts the run.
 
-If one or more targets time out, report the workflow as incomplete. Include already received answers only as partial reference material, and clearly mark which targets timed out.
+If dispatch fails after one or more targets already received the prompt, do not say that nothing was sent. Report the exact state, for example: `GPT and Gemini received the prompt; Claude failed during submission`.
+
+If one or more targets time out, report the workflow as incomplete. Include already received answers only as partial reference material, and clearly mark which targets timed out or failed.
 
 If the user interrupts the run, stop immediately and report the current state.
 
