@@ -1,0 +1,4 @@
+interface:
+  display_name: "Peer Clarify"
+  short_description: "짧은 동료식 피드백으로 모호한 요구사항 정리하기"
+  default_prompt: "Use $peer-clarify to turn my rough idea into clear requirements through short peer-style feedback."
