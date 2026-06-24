@@ -1,0 +1,4 @@
+interface:
+  display_name: "safe-dependency-fix"
+  short_description: "의존성 취약점 분석과 안전한 수정 계획"
+  default_prompt: "$safe-dependency-fix를 사용해서 의존성 취약점을 스캔하고, 파일 변경 전 안전한 수정 계획을 한국어로 먼저 보고해줘."

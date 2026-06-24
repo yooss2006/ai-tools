@@ -9,6 +9,7 @@
 - `multi-ask/`: `$multi-ask`로 명시적으로 호출하면 ChatGPT web, Gemini web, Claude web에 같은 질문을 보내고 답변을 비교합니다.
 - `web-gpt-research/`: `$web-gpt-research`로 명시적으로 호출하면 승인된 프롬프트를 ChatGPT/Web GPT에 보내 리서치를 진행합니다.
 - `job-posting-html-report/`: 채용 공고 URL을 기반으로 회사 조사, 역할 적합도, 지원 전략, 출처 자료를 포함한 Linear 스타일 정적 HTML 리포트 패키지를 생성합니다.
+- `safe-dependency-fix/`: OSV Scanner와 생태계별 audit 도구로 의존성 취약점을 dry-run으로 점검하고, 명시적 승인 후 최소 변경으로 수정합니다.
 
 ## 목적
 새로운 스킬, 서브에이전트, hook, 프롬프트 패턴을 실험하고 검증한 뒤, 다시 쓸 만한 형태로 정리해 두는 공간입니다.
