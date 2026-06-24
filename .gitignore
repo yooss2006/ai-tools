@@ -1,3 +1,5 @@
 docs/
-results/
 .codegraph/
+.DS_Store
+results/*
+!results/test.md
