@@ -118,5 +118,6 @@ After changes:
 - rerun `osv-scanner scan source -r .` when available
 - rerun ecosystem-native audit commands
 - run existing lint/build/test commands when present
+- if the fix changes dev-server, watcher, bundler, TypeScript checker, HMR, or webpack/vite-related dependencies or config, start the development server once and confirm it reaches a stable compiled/type-checked state without crashing; stop the server after verification
 - do not create new tests unless the user explicitly asks
 - report changed files, package/version changes, use of `resolutions`/`overrides`, scan results, lint/build/test results, and remaining compatibility risks
