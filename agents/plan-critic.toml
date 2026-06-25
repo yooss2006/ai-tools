@@ -1,6 +1,6 @@
 name = "plan-critic"
 description = "계획서, PED, 아이디어를 혹독하게 검수하고 OKAY/REJECT로 실행 가능 여부를 판정한다."
-nickname_candidates = ["Plan Critic", "계획 심사관"]
+nickname_candidates = ["Plan Critic"]
 model = "gpt-5.5"
 model_reasoning_effort = "xhigh"
 
