@@ -88,6 +88,19 @@ Prefer the smallest change that removes the vulnerability:
 5. Use `resolutions`, `overrides`, constraints, or replacement rules only as a last resort, and explain why parent/direct updates are insufficient.
 6. Do not change application behavior or make broad dependency refreshes unrelated to the vulnerability.
 
+Resolution/override gate:
+
+Before adding any `resolutions`, `overrides`, constraints, or replacement rules:
+
+1. Apply the approved direct or nearest-parent dependency updates first.
+2. Recompute the lockfile.
+3. Re-run the audit.
+4. Add a resolution only for vulnerabilities that still remain.
+5. Add resolutions one at a time, re-running install and audit after each one.
+6. Stop as soon as the audit is clean.
+
+Forbidden: speculative, defensive, batch, or broad resolutions for packages not still reported vulnerable after direct/parent updates.
+
 Risk labels:
 
 - low: lockfile-only or patch-level change within an existing allowed range
