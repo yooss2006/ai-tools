@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/zsh -lc 'exec /usr/bin/python3 \"${CODEX_HOME:-$HOME/.codex}/hooks/codex_macos_alert.py\"'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

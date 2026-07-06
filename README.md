@@ -15,5 +15,8 @@
 ### 서브에이전트
 - `agents/plan-critic.toml`: 계획서, PED, 아이디어를 검수하고 OKAY/REJECT로 실행 가능 여부를 판정하는 read-only 서브에이전트입니다.
 
+### hooks
+- `codex-macos-alert-hook` : 코덱스 작업 완료시 alert 창이 뜨는 hook입니다.
+
 ## 목적
 새로운 스킬, 서브에이전트, hook, 프롬프트 패턴을 실험하고 검증한 뒤, 다시 쓸 만한 형태로 정리해 두는 공간입니다.
