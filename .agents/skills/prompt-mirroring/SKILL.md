@@ -1,11 +1,11 @@
 ---
 name: prompt-mirroring
-description: Mirror a user's free-form feature or workflow description, surface ambiguities and contradictions, resolve important questions, and produce a confirmed platform-agnostic skill. Use when the user wants their intent reflected back before a skill is written. Do not use when the user already provides a complete skill and only wants a direct edit or conversion.
+description: Mirror a user's free-form development request before implementation, surface omissions, ambiguities, and contradictions, resolve important questions, and produce confirmed requirements. Use when the user wants to clarify a feature, workflow, or change before development. Do not use when the request is already implementation-ready or the user wants immediate implementation without clarification.
 ---
 
 # Prompt Mirroring
 
-Help the user clarify a proposed skill before writing it. Optimize for shared understanding, not speed of generation.
+Help the user clarify a development request before implementation. Optimize for shared understanding, not speed of execution.
 
 ## Workflow
 
@@ -31,8 +31,9 @@ Help the user clarify a proposed skill before writing it. Optimize for shared un
 5. Make the question concrete. Offer choices and a recommendation when useful, but never treat the recommendation as the user's decision.
 6. After each answer, briefly state changes under `반영된 내용`, reassess the whole specification, and ask the next single material question. Re-mirror the full specification only when the conversation has become complex or drift is likely.
 7. Stop questioning when the purpose, scope, inputs, core flow, decision criteria, output, important constraints, and major failure behavior are sufficiently clear. Do not prolong the conversation for details that have a clear convention, little impact, or are easy to change; record those as `기본 가정:` instead.
-8. Only when no material question remains, present the final requirements using the structure below and ask the user to confirm them. Do not write the skill yet.
-9. Write the skill only after the user explicitly confirms the presented requirements, including confirmations such as “좋아”, “확정”, “이대로 만들어줘”, or “Skill 만들어줘”. A confirmation from earlier context counts only when it clearly refers to the current final requirements.
+8. Only when no material question remains, present the final requirements using the structure below and ask the user to confirm them.
+9. Treat the requirements as confirmed only after explicit approval such as “좋아”, “확정”, or “이대로 개발해줘”. A confirmation from earlier context counts only when it clearly refers to the current final requirements.
+10. Do not begin implementation unless the user separately requests it. If implementation was already requested, use the confirmed requirements as its scope and acceptance criteria.
 
 ## 미러링 형식
 
@@ -67,33 +68,10 @@ Then ask exactly one question.
 ## 제약조건
 ## 예외 / 실패 처리
 ## 기본 가정
-## Skill 범위 밖
+## 범위 밖
 ```
 
 End with a direct request to confirm or correct the requirements.
-
-## 생성할 Skill 형식
-
-Unless the user requests a platform-specific format, produce a platform-agnostic skill with only the sections that add useful guidance:
-
-```markdown
-# Skill: {이름}
-
-## 목적
-## 사용 시점
-## 책임 범위
-## 범위 밖
-## 입력
-## 작업 절차
-## 판단 기준
-## 예외 및 실패 처리
-## 출력
-## 제약조건
-## 금지 사항
-## 완료 조건
-```
-
-Write concrete, testable guidance instead of vague terms such as “appropriately,” “automatically,” or “as needed.” Preserve the user's chosen scope and omit empty, redundant, or speculative sections.
 
 ## Non-Negotiable Rules
 
@@ -104,10 +82,10 @@ Write concrete, testable guidance instead of vague terms such as “appropriatel
 - Do not let minor details block progress.
 - Clarify purpose and responsibility before implementation details.
 - Revise prior understanding when the user's answers require it.
-- Do not generate the final skill before explicit confirmation.
-- Do not introduce platform-specific syntax or capabilities unless requested.
+- Do not treat requirements as final before explicit confirmation.
+- Do not start implementation unless requested.
 - Never use the `최종 요구사항` heading while a material question remains unresolved.
 
 ## First Response
 
-When the user first describes the proposed skill, mirror the requirements under `내가 이해한 내용`, identify the most consequential gap, and ask exactly one question. If no material question remains, present `최종 요구사항` and request confirmation.
+When the user first describes the proposed development work, mirror the requirements under `내가 이해한 내용`, identify the most consequential gap, and ask exactly one question. If no material question remains, present `최종 요구사항` and request confirmation.

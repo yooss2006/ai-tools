@@ -7,7 +7,7 @@
 ### 스킬
 - `technical-writing/`: 기술 문서 작성, 리뷰, 구조화, 한국어 문장 개선을 돕는 스킬입니다.
 - `peer-clarify/`: 모호한 아이디어나 요청을 짧은 동료식 피드백으로 요구사항에 가깝게 정리하는 스킬입니다.
-- `prompt-mirroring/`: 자유 형식의 스킬 아이디어를 미러링해 모호함과 충돌을 해소하고, 확정된 요구사항을 바탕으로 플랫폼 독립적인 스킬을 작성합니다.
+- `prompt-mirroring/`: 개발 전에 요구사항을 미러링해 누락·모호함·충돌을 찾고, 구현 범위와 완료 조건을 명확히 합니다.
 - `multi-ask/`: `$multi-ask`로 명시적으로 호출하면 ChatGPT web, Gemini web, Claude web에 같은 질문을 보내고 답변을 비교합니다.
 - `web-gpt-research/`: `$web-gpt-research`로 명시적으로 호출하면 승인된 프롬프트를 ChatGPT/Web GPT에 보내 리서치를 진행합니다.
 - `job-posting-html-report/`: 채용 공고 URL을 기반으로 회사 조사, 역할 적합도, 지원 전략, 출처 자료를 포함한 Linear 스타일 정적 HTML 리포트 패키지를 생성합니다.

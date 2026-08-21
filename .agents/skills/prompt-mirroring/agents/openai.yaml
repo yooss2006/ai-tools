@@ -1,4 +1,4 @@
 interface:
   display_name: "Prompt Mirroring"
-  short_description: "Mirror and clarify prompts before creating a skill"
-  default_prompt: "Use $prompt-mirroring to mirror my feature description, resolve its gaps, and create a confirmed skill."
+  short_description: "Clarify development requirements before implementation"
+  default_prompt: "Use $prompt-mirroring to mirror my development request and identify missing or ambiguous requirements before implementation."
