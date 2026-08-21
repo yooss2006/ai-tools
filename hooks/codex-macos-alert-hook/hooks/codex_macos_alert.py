@@ -4,7 +4,7 @@
 # dependencies = []
 # ///
 # --- How to run ---
-# python3 /Users/yusunsang/.codex/hooks/codex_macos_alert.py < sample-hook.json
+# python3 "${CODEX_HOME:-$HOME/.codex}/hooks/codex_macos_alert.py" < sample-hook.json
 
 from __future__ import annotations
 

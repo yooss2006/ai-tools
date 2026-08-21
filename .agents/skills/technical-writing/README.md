@@ -62,7 +62,7 @@ technical-writing/
 스킬 구조를 수정한 뒤에는 다음 명령으로 기본 형식을 검증합니다.
 
 ```bash
-python3 /Users/yusunsang/.codex/skills/.system/skill-creator/scripts/quick_validate.py /Users/yusunsang/Downloads/technical-writing-master
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" .agents/skills/technical-writing
 ```
 
 정상이라면 다음 메시지가 출력됩니다.
