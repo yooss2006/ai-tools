@@ -1,0 +1,1 @@
+The API cache remains valid for 45 seconds, and production deployments must keep `CACHE_TTL=45`. After changing the value, operators are required to restart the API process. React 19 may run `useEffect` on the server, so teams should consider this behavior before changing the cache setting.

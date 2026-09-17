@@ -1,0 +1,11 @@
+{
+  "name": "console-admin",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  }
+}
