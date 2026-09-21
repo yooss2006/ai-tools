@@ -1,0 +1,7 @@
+interface:
+  display_name: "Planning Interviewer"
+  short_description: "Adaptive planning interviews without technical implementation"
+  default_prompt: "Interview me to clarify and validate this plan without discussing implementation technology."
+
+policy:
+  allow_implicit_invocation: false
